@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <script type="text/javascript" data-app-id="TXdKg74Gy1qngCKOGYgQQ" src="https://c64.assets-yammer.com/assets/platform_js_sdk.js"></script>
+      <span id="yammer-login"></span>
+<script>
+  yam.connect.loginButton('#yammer-login', function (resp) {
+    if (resp.authResponse) {
+      document.getElementById('yammer-login').innerHTML = 'Welcome to Yammer!';
+    }
+  });
+</script>
+<script>
+yam.getLoginStatus(
+  function(response) {
+    if (response.authResponse) {
+      alert("logged in");
+        console.dir(response); //print user information to the console
+      }
+    else {
+      //authResponse = false if the user is not logged in, or is logged in but hasn't authorized your app yet
+      alert("logged out");
+    }
+  }
+);</script>
+    </head>
+    <body>
+        <span id="yammer-login"></span>
+        
+    </body>
+</html>
