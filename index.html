@@ -5,6 +5,7 @@
       <script type="text/javascript" data-app-id="TXdKg74Gy1qngCKOGYgQQ" src="https://c64.assets-yammer.com/assets/platform_js_sdk.js"></script>
       <script type="text/javascript" src="user.js"></script>
       <script type="text/javascript" src="search.js"></script>
+      <script type="text/javascript" src="current_network.js"></script>
       <span id="yammer-login"></span>
 <script>
   yam.connect.loginButton('#yammer-login', function (resp) {
@@ -32,5 +33,6 @@ yam.getLoginStatus(
         <span id="yammer-login"></span>
         <h1><input type="text" name="Keyword" value="Howdy"><button onclick = "search()" type="button" id= "search">search</button></h1>
         <h1><button onclick = "user()" type="button" id= "users">users</button></h1>
+        <h1><button onclick = "current_network()" type="button" id= "current_network">current_network</button></h1>
     </body>
 </html>
