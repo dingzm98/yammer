@@ -1,6 +1,6 @@
 function user(){
     yam.platform.request({
-        url: "users.json",     //this is one of many REST endpoints that are available
+        url: "users/current.json",     //this is one of many REST endpoints that are available
         method: "GET",
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "letter": "a",
