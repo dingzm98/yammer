@@ -5,7 +5,7 @@ function search(){
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "search": "Howdy",
           "page": "1",
-          "num_per_page":"3"
+          "num_per_page":"3",
         },
         success: function (search) { //print message response information to the console
           alert("The request was successful.");
