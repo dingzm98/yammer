@@ -10,7 +10,8 @@ function search(){
         },
         success: function (search) { //print message response information to the console
           alert("The request was successful.");
-          console.dir(search);
+
+          console.dir(search.message);
         },
         error: function (search) {
           alert("There was an error with the request.");
