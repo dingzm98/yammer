@@ -10,8 +10,7 @@ function search(){
         },
         success: function (search) { //print message response information to the console
           alert("The request was successful.");
-          obj = JSON.parse(search);
-          console.dir(obj.message);
+          console.log(search.message);
         },
         error: function (search) {
           alert("There was an error with the request.");
