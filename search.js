@@ -11,9 +11,8 @@ function search(){
         },
         success: function (search) { //print message response information to the console
           alert("The request was successful.");
-          var obj = JSON.parse(search)
           console.dir(search);
-          console.log(obj.message);
+          console.log(search.messages);
         },
         error: function (search) {
           alert("There was an error with the request.");
