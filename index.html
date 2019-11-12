@@ -36,19 +36,53 @@ yam.getLoginStatus(
     </head>
     <body>
         <span id="yammer-login"></span>
-        <div class="form-group w-25">
-
-
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Content" id="search" aria-label="Content" aria-describedby="search_button">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-primary" onclick = "search()" type="button" id="search_button">search</button>
+        <nav id="navbar-example2" class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Yammer API Functions</a>
+            <ul class="nav nav-pills">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Function Dropdown</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#dropdown_search">Search.json</a>
+                  <a class="dropdown-item" href="#dropdown_users">users.json</a>
+                  <a class="dropdown-item" href="#three">three</a>
                 </div>
+              </li>
+            </ul>
+          </nav>
+
+
+
+          <div class="form-group w-75">
+              <h4 id="dropdown_search">The search resource will return a list of messages, users, topics and groups that match the user’s search query.</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Content" id="search" aria-label="Content" aria-describedby="search_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "search()" type="button" id="search_button">search</button>
+                  </div>
               </div>
+          </div>
+
+
+
+          <div class="form-group w-75">
+              <h4 id="dropdown_users">Retrieve users in the current user’s Yammer network. Supports page, sort_by, reverse, and letter parameters.</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="letter" id="user_letter" aria-label="Content" aria-describedby="search_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "search()" type="button" id="search_button">users</button>
+                  </div>
+              </div>
+          </div>
+
+
             <h1><button onclick = "user()" type="button">users</button></h1>
             <h1><button onclick = "current_user()" type="button" >current_user</button></h1>
             <h1><button onclick = "current_network()" type="button" >current_network</button></h1>
             <h1><input type="text" name="userid" id="userid" value="253828489216"><button onclick = "group_for_user()" type="button">group_for_user</button></h1>
-        </div>
+        
         </body>
 </html>
