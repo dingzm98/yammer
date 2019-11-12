@@ -6,6 +6,7 @@
       <script type="text/javascript" src="user.js"></script>
       <script type="text/javascript" src="search.js"></script>
       <script type="text/javascript" src="current_network.js"></script>
+      <script type="text/javascript" src="current_user.js"></script>
       <span id="yammer-login"></span>
 <script>
   yam.connect.loginButton('#yammer-login', function (resp) {
@@ -33,6 +34,7 @@ yam.getLoginStatus(
         <span id="yammer-login"></span>
         <h1><input type="text" name="Keyword" id="search" value="Howdy"><button onclick = "search()" type="button">search</button></h1>
         <h1><button onclick = "user()" type="button">users</button></h1>
+        <h1><button onclick = "current_user()" type="button" >current_user</button></h1>
         <h1><button onclick = "current_network()" type="button" >current_network</button></h1>
     </body>
 </html>
