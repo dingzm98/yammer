@@ -7,6 +7,7 @@
       <script type="text/javascript" src="search.js"></script>
       <script type="text/javascript" src="current_network.js"></script>
       <script type="text/javascript" src="current_user.js"></script>
+      <script type="text/javascript" src="group_for_user.js"></script>
       <span id="yammer-login"></span>
 <script>
   yam.connect.loginButton('#yammer-login', function (resp) {
@@ -36,5 +37,6 @@ yam.getLoginStatus(
         <h1><button onclick = "user()" type="button">users</button></h1>
         <h1><button onclick = "current_user()" type="button" >current_user</button></h1>
         <h1><button onclick = "current_network()" type="button" >current_network</button></h1>
+        <h1><input type="text" name="userid" id="userid" value="253828489216"><button onclick = "search()" type="button">search</button></h1>
     </body>
 </html>
