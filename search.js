@@ -12,6 +12,7 @@ function search(){
         success: function (search) { //print message response information to the console
           alert("The request was successful.");
           console.dir(search);
+          console.log(search.messages.messages[0].content_excerpt);
           var i;
           for (i = 0; i < search.count.messages; i++) {
             console.log(search.messages.messages[i].content_excerpt);
