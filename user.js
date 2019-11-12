@@ -9,6 +9,10 @@ function user(){
         success: function (user) { //print message response information to the console
           alert("The request was successful.");
           console.dir(user);
+          var i;
+          for (i = 0; i < 50; i++) {
+            console.log(user[i].full_name);
+          }
         },
         error: function (user) {
           alert("There was an error with the request.");
