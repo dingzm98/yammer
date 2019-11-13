@@ -1,5 +1,6 @@
 function group_for_user(){
   var useridg = document.getElementById('userid').value;
+  var lettersearch = document.getElementById('letter').value;
     yam.platform.request({
         url: "groups/for_user/"+useridg+".json",     //this is one of many REST endpoints that are available
         method: "GET",
