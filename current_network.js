@@ -7,7 +7,7 @@ function current_network(){
         },
         success: function (current_network) { //print message response information to the console
           alert("The request was successful.");
-          console.dir(current_network);
+          console.dir(current_network[0].name);
         },
         error: function (current_network) {
           alert("There was an error with the request.");

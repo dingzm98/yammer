@@ -7,7 +7,7 @@ function current_user(){
         },
         success: function (user) { //print message response information to the console
           alert("The request was successful.");
-          console.dir(user);
+          console.dir(user.full_name);
         },
         error: function (user) {
           alert("There was an error with the request.");
