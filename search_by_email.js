@@ -1,7 +1,7 @@
 function search_by_email(){
   var email = document.getElementById('email').value;
     yam.platform.request({
-        url: "/users/by_email.json?email="+email,     //this is one of many REST endpoints that are available
+        url: "/users/by_email.json?email=dingzm98@tamu.edu",     //this is one of many REST endpoints that are available
         method: "GET",
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "User_Email": email,
