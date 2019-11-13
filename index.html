@@ -48,7 +48,7 @@ yam.getLoginStatus(
                   <a class="dropdown-item" href="#dropdown_currentusers">users/current.json</a>
                   <a class="dropdown-item" href="#dropdown_currentnetwork">networks/current.json</a>
                   <a class="dropdown-item" href="#dropdown_users_group">groups/for_user/:User_Id.json</a>
-                  <a class="dropdown-item" href="#">users/by_email.json?email=user@domain.com</a>
+                  <a class="dropdown-item" href="#dropdown_searchbyemail">users/by_email.json?email=user@domain.com</a>
                   <a class="dropdown-item" href="#">users/in_group/[:id].json</a>
                   <a class="dropdown-item" href="#">users/liked_message/[:Message_id].json</a>
                   <a class="dropdown-item" href="#">messages.json</a>
@@ -132,6 +132,19 @@ yam.getLoginStatus(
               </div>
           </div>
 
+          <br>
+          <h2 id="dropdown_searchbyemail">users/by_email.json?email=user@domain.com</h2>
+          <div class="form-group w-75">
+              <h4>Search user by email address.</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="email" id="email" value="dingzm98@tamu.edu" aria-label="Content" aria-describedby="searchbyemail">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "search_by_email()" type="button" id="searchbyemail">Search by email</button>
+                  </div>
+              </div>
+          </div>
           
           <h4>hello</h4>
 
