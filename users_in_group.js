@@ -10,8 +10,8 @@ function users_in_group(){
           alert("The request was successful.");
           console.dir(user);
           var i;
-          for (i = 0; i < user.length; i++) {
-            console.log(user[i].full_name);
+          for (i = 0; i < user.users.length; i++) {
+            console.log(user.users[i].full_name);
           }
         },
         error: function (user) {
