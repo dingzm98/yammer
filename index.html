@@ -35,7 +35,6 @@ yam.getLoginStatus(
 </script>
     </head>
     <body>
-      
         <div><span id="yammer-login"></span></div>
         <nav id="navbar-example2" class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="#">Yammer API Functions</a>
@@ -48,11 +47,31 @@ yam.getLoginStatus(
                   <a class="dropdown-item" href="#dropdown_currentusers">users/current.json</a>
                   <a class="dropdown-item" href="#dropdown_currentnetwork">networks/current.json</a>
                   <a class="dropdown-item" href="#dropdown_users_group">groups/for_user/:User_Id.json</a>
+                  <a class="dropdown-item" href="#">users/by_email.json?email=user@domain.com</a>
+                  <a class="dropdown-item" href="#">users/in_group/[:id].json</a>
+                  <a class="dropdown-item" href="#">users/liked_message/[:Message_id].json</a>
+                  <a class="dropdown-item" href="#">messages.json</a>
+                  <a class="dropdown-item" href="#">messages/following.json</a>
+                  <a class="dropdown-item" href="#">messages/sent.json</a>
+                  <a class="dropdown-item" href="#">messages/private.json</a>
+                  <a class="dropdown-item" href="#">messages/received.json</a>
+                  <a class="dropdown-item" href="#">messages/in_thread/[:thread_id].json</a>
+                  <a class="dropdown-item" href="#">messages/in_group/[:group_id].json</a>
+                  <a class="dropdown-item" href="#">messages/about_topic/[:id].json</a>
+                  <a class="dropdown-item" href="#">threads/[:id].json</a>
+                  <a class="dropdown-item" href="#">topics/[:id].json</a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">messages</a>
+                  <a class="dropdown-item" href="#">messages/email</a>
+                  <a class="dropdown-item" href="#">messages/liked_by/current.json?message_id=[:id]</a>
+                  
+
                 </div>
               </li>
             </ul>
           </nav>
-          
+
+
           <h2 id="dropdown_search">Search.json</h2>
           <div class="form-group w-75">
               <h4 >The search resource will return a list of messages, users, topics and groups that match the user’s search query.</h4>
