@@ -13,6 +13,7 @@
       <script type="text/javascript" src="group_for_user.js"></script>
       <script type="text/javascript" src="search_by_email.js"></script>
       <script type="text/javascript" src="users_in_group.js"></script>
+      <script type="text/javascript" src="liked_users.js"></script>
       <span id="yammer-login"></span>
 <script>
   yam.connect.loginButton('#yammer-login', function (resp) {
@@ -52,7 +53,7 @@ yam.getLoginStatus(
                   <a class="dropdown-item" href="#dropdown_users_group">groups/for_user/:User_Id.json</a>
                   <a class="dropdown-item" href="#dropdown_searchbyemail">users/by_email.json?email=user@domain.com</a>
                   <a class="dropdown-item" href="#dropdown_users_is_group">users/in_group/[:id].json</a>
-                  <a class="dropdown-item" href="#">users/liked_message/[:Message_id].json</a>
+                  <a class="dropdown-item" href="#dropdown_liked_users">users/liked_message/[:Message_id].json</a>
                   <a class="dropdown-item" href="#">messages.json</a>
                   <a class="dropdown-item" href="#">messages/following.json</a>
                   <a class="dropdown-item" href="#">messages/sent.json</a>
@@ -161,9 +162,25 @@ yam.getLoginStatus(
                   </div>
               </div>
           </div>
+
+
+          <br>
+          <h2 id="dropdown_liked_users">users/liked_message/[:Message_id].json</h2>
+          <div class="form-group w-75">
+              <h4>Users who have liked a message. Supports the page parameter.</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="messageid" id="messageid" value="340686728773632" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "liked_users()" type="button" id="groupuser_button">liked_users</button>
+                  </div>
+              </div>
+          </div>
+          
           
           <h4>hello</h4>
-
+          
           <h4>hello</h4>
           <h4>hello</h4>
 
