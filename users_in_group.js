@@ -1,7 +1,7 @@
 function users_in_group(){
   var Group_Id = document.getElementById('Groupid').value;
     yam.platform.request({
-        url: "users/in_group/"+ Group_Id +".json",     //this is one of many REST endpoints that are available
+        url: "users/in_group/9734488064.json",     //this is one of many REST endpoints that are available
         method: "GET",
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "Group_Id": Group_Id,
