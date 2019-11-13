@@ -4,7 +4,7 @@ function users_in_group(){
         url: "users/in_group/"+Groupid+".json",     //this is one of many REST endpoints that are available
         method: "GET",
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
-          "User_Id": useridg,
+          "Group_Id": useridg,
         },
         success: function (user) { //print message response information to the console
           alert("The request was successful.");
