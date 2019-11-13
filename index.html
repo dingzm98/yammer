@@ -12,6 +12,7 @@
       <script type="text/javascript" src="current_user.js"></script>
       <script type="text/javascript" src="group_for_user.js"></script>
       <script type="text/javascript" src="search_by_email.js"></script>
+      <script type="text/javascript" src="users_in_group.js"></script>
       <span id="yammer-login"></span>
 <script>
   yam.connect.loginButton('#yammer-login', function (resp) {
@@ -50,7 +51,7 @@ yam.getLoginStatus(
                   <a class="dropdown-item" href="#dropdown_currentnetwork">networks/current.json</a>
                   <a class="dropdown-item" href="#dropdown_users_group">groups/for_user/:User_Id.json</a>
                   <a class="dropdown-item" href="#dropdown_searchbyemail">users/by_email.json?email=user@domain.com</a>
-                  <a class="dropdown-item" href="#">users/in_group/[:id].json</a>
+                  <a class="dropdown-item" href="#dropdown_users_is_group">users/in_group/[:id].json</a>
                   <a class="dropdown-item" href="#">users/liked_message/[:Message_id].json</a>
                   <a class="dropdown-item" href="#">messages.json</a>
                   <a class="dropdown-item" href="#">messages/following.json</a>
@@ -143,6 +144,20 @@ yam.getLoginStatus(
                   <input type="text" class="form-control" placeholder="email" id="email" value="dingzm98@tamu.edu" aria-label="Content" aria-describedby="searchbyemail">
                   <div class="input-group-append">
                   <button class="btn btn-outline-primary" onclick = "search_by_email()" type="button" id="searchbyemail">Search by email</button>
+                  </div>
+              </div>
+          </div>
+
+          <br>
+          <h2 id="dropdown_users_is_group">users/in_group/[:id].json</h2>
+          <div class="form-group w-75">
+              <h4>Users in a group. Supports the page parameter.</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Groupid" id="Groupid" value="9734488064" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "users_in_group()" type="button" id="groupuser_button">group_for_user</button>
                   </div>
               </div>
           </div>
