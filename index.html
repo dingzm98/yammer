@@ -14,6 +14,17 @@
       <script type="text/javascript" src="search_by_email.js"></script>
       <script type="text/javascript" src="users_in_group.js"></script>
       <script type="text/javascript" src="liked_users.js"></script>
+      <script type="text/javascript" src="messgaes.js"></script>
+      <script type="text/javascript" src="messages_following.js"></script>
+      <script type="text/javascript" src="messages_sent.js"></script>
+      <script type="text/javascript" src="messages_private.js"></script>
+      <script type="text/javascript" src="messages_received.js"></script>
+      <script type="text/javascript" src="messages_inthread.js"></script>
+      <script type="text/javascript" src="messages_ingroup.js"></script>
+      <script type="text/javascript" src="messages_about_topic.js"></script>
+      <script type="text/javascript" src="threads.js"></script>
+      <script type="text/javascript" src="topics.js"></script>
+
       <span id="yammer-login"></span>
 <script>
   yam.connect.loginButton('#yammer-login', function (resp) {
@@ -54,16 +65,16 @@ yam.getLoginStatus(
                   <a class="dropdown-item" href="#dropdown_searchbyemail">users/by_email.json?email=user@domain.com</a>
                   <a class="dropdown-item" href="#dropdown_users_is_group">users/in_group/[:id].json</a>
                   <a class="dropdown-item" href="#dropdown_liked_users">users/liked_message/[:Message_id].json</a>
-                  <a class="dropdown-item" href="#">messages.json</a>
-                  <a class="dropdown-item" href="#">messages/following.json</a>
-                  <a class="dropdown-item" href="#">messages/sent.json</a>
-                  <a class="dropdown-item" href="#">messages/private.json</a>
-                  <a class="dropdown-item" href="#">messages/received.json</a>
-                  <a class="dropdown-item" href="#">messages/in_thread/[:thread_id].json</a>
-                  <a class="dropdown-item" href="#">messages/in_group/[:group_id].json</a>
-                  <a class="dropdown-item" href="#">messages/about_topic/[:id].json</a>
-                  <a class="dropdown-item" href="#">threads/[:id].json</a>
-                  <a class="dropdown-item" href="#">topics/[:id].json</a>
+                  <a class="dropdown-item" href="#dropdown_messages">messages.json</a>
+                  <a class="dropdown-item" href="#dropdown_messages_following">messages/following.json</a>
+                  <a class="dropdown-item" href="#dropdown_messages_sent">messages/sent.json</a>
+                  <a class="dropdown-item" href="#dropdown_messages_private">messages/private.json</a>
+                  <a class="dropdown-item" href="#dropdown_messages_received">messages/received.json</a>
+                  <a class="dropdown-item" href="#dropdown_messages_inthread">messages/in_thread/[:thread_id].json</a>
+                  <a class="dropdown-item" href="#dropdown_messages_ingroup">messages/in_group/[:group_id].json</a>
+                  <a class="dropdown-item" href="#dropdown_messages_about_topic">messages/about_topic/[:id].json</a>
+                  <a class="dropdown-item" href="#dropdown_threads">threads/[:id].json</a>
+                  <a class="dropdown-item" href="#dropdown_topicss">topics/[:id].json</a>
                   <div role="separator" class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">messages</a>
                   <a class="dropdown-item" href="#">messages/email</a>
@@ -177,30 +188,157 @@ yam.getLoginStatus(
                   </div>
               </div>
           </div>
+
+
+          <br>
+          <h2 id="dropdown_messages">messages.json</h2>
+          <div class="form-group w-75">
+              <h4>All public messages in the user's yammer network.</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="newer_than" id="newer_than" value="340686728773632" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "messages()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
+
+
+          <br>
+          <h2 id="dropdown_messages_following">messages/following.json</h2>
+          <div class="form-group w-75">
+              <h4>The "following" feed which is conversations involving people and topics that the user is following</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="newer_than" id="following_newer_than" value="340686728773632" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "messages_following()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
+
+
+          <br>
+          <h2 id="dropdown_messages_sent">messages/sent.json</h2>
+          <div class="form-group w-75">
+              <h4>All messages sent by the user.</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="newer_than" id="sent_newer_than" value="340686728773632" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "messages_sent()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
+
+
+          <br>
+          <h2 id="dropdown_messages_private">messages/private.json</h2>
+          <div class="form-group w-75">
+              <h4>Private messgaes received by the user</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="newer_than" id="private_newer_than" value="340686728773632" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "messages_private()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
+
+
+          <br>
+          <h2 id="dropdown_messages_received">messages/received.json</h2>
+          <div class="form-group w-75">
+              <h4>All messgaes received by the user</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="newer_than" id="received_newer_than" value="340686728773632" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "messages_received()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
+
+
+          <br>
+          <h2 id="dropdown_messages_inthread">messages/in_thread/[:thread_id].json</h2>
+          <div class="form-group w-75">
+              <h4>All messgaes in a specified thread</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="tnread_id" id="inthreadid" value=" " aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "messages_inthread()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
+
+
+          <br>
+          <h2 id="dropdown_messages_ingroup">messages/in_group/[:group_id].json</h2>
+          <div class="form-group w-75">
+              <h4>All messgaes in a specified group</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="group_id" id="ingroup_id" value=" " aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "messages_ingroup()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
+          
+
+          <br>
+          <h2 id="dropdown_messages_about_topic">messages/about_topic/[:id].json</h2>
+          <div class="form-group w-75">
+              <h4>returns messages relating to the topic specifies by the numeric topic id</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="topic_id" id="about_topic_id" value=" " aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "messages_about_topic()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
           
           
-          
-          <h4>hello</h4>
-          <h4>hello</h4>
+          <br>
+          <h2 id="dropdown_threads">threads/[:id].json</h2>
+          <div class="form-group w-75">
+              <h4>The metadata for a thread</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="tnread_id" id="threadsid" value=" " aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "threads()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
 
-          <h4>hello</h4>
 
-          <h4>hello</h4>
-          <h4>hello</h4>
-          <h4>hello</h4>
-          <h4>hello</h4>
-          <h4>hello</h4>
-          <h4>hello</h4>
 
-          <h4>hello</h4>
-          <h4>hello</h4>
+          <br>
+          <h2 id="dropdown_topicss">topics/[:id].json</h2>
+          <div class="form-group w-75">
+              <h4>The users that have used the topic specified by the numeric string ID</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="topic_id" id="topicsid" value=" " aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "threads()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
 
-          <h4>hello</h4>
-
-          <h4>hello</h4>
-          <h4>hello</h4>
-          <h4>hello</h4>
-          <h4>hello</h4>
-        
         </body>
 </html>
