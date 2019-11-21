@@ -6,7 +6,7 @@ function messages_private(){
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "newer_than": newer_than,
           "threaded": true,
-          "limit": 5,
+          "limit": 10,
         },
         success: function (user) { //print message response information to the console
           alert("The request was successful.");
