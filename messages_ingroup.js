@@ -1,5 +1,5 @@
 function messages_ingroup(){
-  var groupid = document.getElementById('ingroupid').value;
+  var groupid = document.getElementById('ingroup_id').value;
     yam.platform.request({
         url: "messages/in_group/"+groupid+".json",     //this is one of many REST endpoints that are available
         method: "GET",
