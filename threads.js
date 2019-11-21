@@ -1,7 +1,7 @@
 function threads(){
   var threadid = document.getElementById('threadsid').value;
     yam.platform.request({
-        url: "threads"+threadid+".json",     //this is one of many REST endpoints that are available
+        url: "threads/"+threadid+".json",     //this is one of many REST endpoints that are available
         method: "GET",
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "Thread_id": threadid,
