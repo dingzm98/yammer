@@ -1,7 +1,7 @@
 function likemessage(){
   var messageid = document.getElementById('likemessage').value;
     yam.platform.request({
-        url: "messages/liked_by/current.json?message_id="+messages,     //this is one of many REST endpoints that are available
+        url: "messages/liked_by/current.json,     //this is one of many REST endpoints that are available
         method: "POST",
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "message_id": messageid,
