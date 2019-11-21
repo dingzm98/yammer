@@ -76,7 +76,7 @@ yam.getLoginStatus(
                   <a class="dropdown-item" href="#dropdown_threads">threads/[:id].json</a>
                   <a class="dropdown-item" href="#dropdown_topicss">topics/[:id].json</a>
                   <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">messages</a>
+                  <a class="dropdown-item" href="#dropdown_send_messages">messages</a>
                   <a class="dropdown-item" href="#">messages/email</a>
                   <a class="dropdown-item" href="#">messages/liked_by/current.json?message_id=[:id]</a>
                   
@@ -336,6 +336,22 @@ yam.getLoginStatus(
                   <input type="text" class="form-control" placeholder="topic_id" id="topicsid" value="27187544064" aria-label="Content" aria-describedby="groupuser_button">
                   <div class="input-group-append">
                   <button class="btn btn-outline-primary" onclick = "threads()" type="button" id="groupuser_button">search</button>
+                  </div>
+              </div>
+          </div>
+
+          <br>
+          <h2 id="dropdown_send_messages">messages.json</h2>
+          <div class="form-group w-75">
+              <h4>Create a new message. The response body will include the new message formatted the same way as message polling above. This allows your app to immediately display the newly-posted message back to the user.
+POST messages are form encoded.</h4>
+          </div> 
+          <div class="form-group w-75">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="group id" id="sendgroup" value="9734488064" aria-label="Content" aria-describedby="groupuser_button">
+                  <input type="text" class="form-control" placeholder="Content you want to send" id="sendcontent" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "sendmessage()" type="button" id="groupuser_button">send</button>
                   </div>
               </div>
           </div>
