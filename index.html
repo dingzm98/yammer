@@ -26,6 +26,8 @@
       <script type="text/javascript" src="topics.js"></script>
       <script type="text/javascript" src="sendmessage.js"></script>
       <script type="text/javascript" src="getemail.js"></script>
+      <script type="text/javascript" src="likemessage.js"></script>
+
 
       <span id="yammer-login"></span>
 <script>
@@ -80,7 +82,7 @@ yam.getLoginStatus(
                   <div role="separator" class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#dropdown_send_messages">messages</a>
                   <a class="dropdown-item" href="#dropdown_getemail">messages/email</a>
-                  <a class="dropdown-item" href="#">messages/liked_by/current.json?message_id=[:id]</a>
+                  <a class="dropdown-item" href="#dropdown_likemessage">messages/liked_by/current.json?message_id=[:id]</a>
                   
 
                 </div>
@@ -369,6 +371,21 @@ POST messages are form encoded.</h4>
                   <input type="text" class="form-control" placeholder="messageid" id="emailmessage" value="340686728773632" aria-label="Content" aria-describedby="groupuser_button">
                   <div class="input-group-append">
                   <button class="btn btn-outline-primary" onclick = "getemail()" type="button" id="groupuser_button">get email</button>
+                  </div>
+              </div>
+          </div>
+
+
+           <br>
+          <h2 id="dropdown_likemessage">messages/liked_by/current.json?message_id=[:id]</h2>
+          <div class="form-group w-75">
+              <h4>Marks the specified message as liked by the current user.</h4>
+          </div> 
+          <div class="form-group w-25">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="messageid" id="likemessage" value="340686728773632" aria-label="Content" aria-describedby="groupuser_button">
+                  <div class="input-group-append">
+                  <button class="btn btn-outline-primary" onclick = "likemessage()" type="button" id="groupuser_button">like</button>
                   </div>
               </div>
           </div>
