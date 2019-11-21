@@ -12,8 +12,11 @@ function messages_received(){
           alert("The request was successful.");
           console.dir(user);
           var i;
-          for (i = 0; i < user.users.length; i++) {
-            console.log(user.users[i].full_name);
+          if(user.messages.length == 0){
+            console.log("no message received");
+          }
+          for (i = 0; i < user.messages.length; i++) {
+            console.log(user.messages[i].content_excerpt);
           }
         },
         error: function (user) {

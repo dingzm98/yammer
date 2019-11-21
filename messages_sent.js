@@ -1,7 +1,7 @@
 function messages_sent(){
   var newer_than = document.getElementById('sent_newer_than').value;
     yam.platform.request({
-        url: "messages.sent.json",     //this is one of many REST endpoints that are available
+        url: "messages/sent.json",     //this is one of many REST endpoints that are available
         method: "GET",
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "newer_than": newer_than,
@@ -12,8 +12,8 @@ function messages_sent(){
           alert("The request was successful.");
           console.dir(user);
           var i;
-          for (i = 0; i < user.users.length; i++) {
-            console.log(user.users[i].full_name);
+          for (i = 0; i < user.messages.length; i++) {
+            console.log(user.messages[i].content_excerpt);
           }
         },
         error: function (user) {
