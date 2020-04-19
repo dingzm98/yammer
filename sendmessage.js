@@ -8,7 +8,7 @@ function sendmessage(){
         req.onload = function() {
             let response = JSON.parse(req.responseText);
             console.log('success');
-            tag = response.value;
+            tag = response[0].content_excerpt;
             console.log(tag);
         }
         let sendData = JSON.stringify(
