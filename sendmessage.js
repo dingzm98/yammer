@@ -25,7 +25,7 @@ function sendmessage(){
         data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
           "body": content,
           "group_id": groupid,
-          "topic1": tag,
+          "topic1": tag
         },
         success: function (user) { //print message response information to the console
           alert("The request was successful.");
