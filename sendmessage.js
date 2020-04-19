@@ -18,14 +18,14 @@ function sendmessage(){
       }
     });
    }
-  var tag = "tag";
   let req = new XMLHttpRequest();
         req.open('POST', 'https://cors-anywhere.herokuapp.com/http://a089ec8b4801511eaaf7502ed822b4dd-589797411.us-west-2.elb.amazonaws.com/mml-test-api');
         req.setRequestHeader('Content-Type', 'application/json');
         req.onload = function() {
             let response = JSON.parse(req.responseText);
             console.log('success');
-            tag = response[0];
+            var tag = response[0];
+            sendyam(groupid,content,response[0]);
             console.log(tag);
         }
         let sendData = JSON.stringify(
@@ -34,7 +34,7 @@ function sendmessage(){
               }
             );
         req.send(sendData);
-      sendyam(groupid,content,tag);
+      
 
         
 
