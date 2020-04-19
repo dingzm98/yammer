@@ -18,7 +18,7 @@ function sendmessage(){
             );
         req.send(sendData);
 
-
+    console.log(tag);
     yam.platform.request({
         url: "messages.json",     //this is one of many REST endpoints that are available
         method: "POST",
