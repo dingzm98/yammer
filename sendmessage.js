@@ -9,6 +9,7 @@ function sendmessage(){
             let response = JSON.parse(req.responseText);
             console.log('success');
             tag = response;
+            console.log(tag);
         }
         let sendData = JSON.stringify(
             {
