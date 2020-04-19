@@ -1,6 +1,8 @@
 function sendmessage(){
   var groupid = document.getElementById('sendgroup').value;
   var content = document.getElementById('sendcontent').value;
+
+  
     yam.platform.request({
         url: "messages.json",     //this is one of many REST endpoints that are available
         method: "POST",
@@ -16,4 +18,7 @@ function sendmessage(){
           alert("There was an error with the request.");
         }
       });
+
+
+
 }
