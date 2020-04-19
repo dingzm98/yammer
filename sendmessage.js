@@ -1,7 +1,7 @@
 function sendmessage(){
   var groupid = document.getElementById('sendgroup').value;
   var content = document.getElementById('sendcontent').value;
-  var tag;
+  var tag = " ";
   let req = new XMLHttpRequest();
         req.open('POST', 'https://cors-anywhere.herokuapp.com/http://a089ec8b4801511eaaf7502ed822b4dd-589797411.us-west-2.elb.amazonaws.com/mml-test-api');
         req.setRequestHeader('Content-Type', 'application/json');
