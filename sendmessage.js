@@ -37,11 +37,6 @@ function sendmessage(){
               }
             );
         req.send(sendData);
-      
 
-        
-
-
-      
         
 }
